@@ -2,15 +2,15 @@ var h1 = document.getElementsByTagName('h1')[0];
 var iniciar = document.getElementById('iniciar');
 var detener = document.getElementById('detener');
 var reiniciar = document.getElementById('reiniciar');
-var sec = 0;
+var seg = 0; 
 var min = 0;
 var hrs = 0;
 var t;
 
 function tick(){
-    sec++;
-    if (sec >= 60) {
-        sec = 0;
+    seg++;
+    if (seg >= 60) {
+        seg = 0;
         min++;
         if (min >= 60) {
             min = 0;
@@ -22,7 +22,7 @@ function add() {
     tick();
     h1.textContent = (hrs > 9 ? hrs : "0" + hrs) 
         	 + ":" + (min > 9 ? min : "0" + min)
-       		 + ":" + (sec > 9 ? sec : "0" + sec);
+       		 + ":" + (seg > 9 ? sec : "0" + seg);
     timer();
 }
 function timer() {
