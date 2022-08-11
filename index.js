@@ -1,7 +1,7 @@
 var h1 = document.getElementsByTagName('h1')[0];
-var start = document.getElementById('strt');
-var stop = document.getElementById('stp');
-var reset = document.getElementById('rst');
+var iniciar = document.getElementById('iniciar');
+var detener = document.getElementById('detener');
+var reiniciar = document.getElementById('reiniciar');
 var sec = 0;
 var min = 0;
 var hrs = 0;
@@ -30,11 +30,11 @@ function timer() {
 }
 
 timer();
-start.onclick = timer;
-stop.onclick = function() {
+iniciar.onclick = timer;
+detener.onclick = function() {
     clearTimeout(t);
 }
-reset.onclick = function() {
+reiniciar.onclick = function() {          //Al hacer click en el boton que el texto del h1 cambie a 00:00:00 // 
     h1.textContent = "00:00:00";
     seconds = 0; minutes = 0; hours = 0;
 }
